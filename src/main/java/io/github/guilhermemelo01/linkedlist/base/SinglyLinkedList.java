@@ -1,10 +1,11 @@
-package io.github.guilhermemelo01.linkedlist;
+package io.github.guilhermemelo01.linkedlist.base;
 
 public class SinglyLinkedList {
 
     public static void main(String[] args) {
         Node<Integer> node2 = new Node<>(19);
         Node<Integer> node1 = new Node<>(12);
+
 
         node1.setNext(node2);
 
