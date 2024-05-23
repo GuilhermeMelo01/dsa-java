@@ -2,12 +2,41 @@ package io.github.guilhermemelo01.linkedlist.problems;
 
 import io.github.guilhermemelo01.linkedlist.problems.listnode.ListNode;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Locale;
+import java.util.Scanner;
+
 public class InsertGreatestCommonDivisors {
 
-    public static void main(String[] args) {
-        ListNode head = new ListNode(18, new ListNode(6, new ListNode(10, new ListNode(3, null))));
-        ListNode listNode = insertGreatestCommonDivisors(head);
-        System.out.println(listNode);
+    public static void main(String[] args) throws IOException {
+//        ListNode head = new ListNode(18, new ListNode(6, new ListNode(10, new ListNode(3, null))));
+//        ListNode listNode = insertGreatestCommonDivisors(head);
+//        System.out.println(listNode);
+        Scanner scanner = new Scanner(System.in);
+        Integer cases = scanner.nextInt();
+
+        while(cases > 0){
+            int number = scanner.nextInt();
+            Integer halfOfNumber = number/2;
+            Integer sum = 0;
+
+            for(int i = halfOfNumber; i >= 1; i--){
+                if(number % i == 0){
+                    sum += i;
+                }
+            }
+
+            if(sum == number){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+            cases--;
+        }
     }
 
     public static ListNode insertGreatestCommonDivisors(ListNode head) {
