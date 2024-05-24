@@ -1,19 +1,59 @@
 package io.github.guilhermemelo01;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        char character = 'c';
+        String nome = "Cris";
+        int idade = 22;
+        double kilos = 120.0;
+        boolean verdade = true;
 
-        int value = in.nextInt();
+        /**
+         * JAVA
+         * - Backend <-> Frontend
+         * - Parte escondido - faz conexão bd
+         * - Typagem - int, string ou etc
+         * - PQ VAMOS APRENDER JAVA? MORE MONEY
+         * */
 
-        if(value % 2 == 0){
-            System.out.println("YES");
-        }
-        else {
-            System.out.println("NO");
-        }
+        // JAVA
+        // LOGICA DE PROGRAMAÇÃO COM JAVA, POO, BANCO DE DADOS,
+
+        // 1 - PASSO -> ENVIAR CURRICULOS
+
+        // programacao -> ingles -> aplicar vaga exterior
+        // WEB -> java, python, javascript, c++, c#, html, css, ...
+
+        //Intellij e vscode -> criadores de codigo.
+        //linguagem + idea
+
+        // faculdade -> aprende uma linguagem qualquer -> aplica // 3 meses
+
+        //GITHUB - GIT
+
+        // GIT - LOCAL
+        // GITHUB - NUVEM
+
+        //
+
+        /**
+         * JAVASCRIPT
+         * - Frontend
+         * - Parte visivel - sem perigo
+         * - nao tipado - let, const
+         * */
+
+
+        /**
+         * ENGLISH
+         * - READ / LISTEN - VIDEO, SERIE, OU ALGO DO TIPO (vocabulario)
+         * - WRITE -
+         * - SPEAK -
+         *
+         * */
+
+        System.out.println(nome);
+        System.out.println(idade);
     }
 }
