@@ -28,19 +28,82 @@ public class SinglyLinkedList {
         System.out.println("----INSERT IN GIVEN POSITION----");
         head = insertNewNodeInGivePosition(new Node<>(439), head, 3);
         printValuesNode(head);
+
+        System.out.println("----DELETE FIRST NODE----");
+        head = deleteFirstNode(head);
+        printValuesNode(head);
+
+        System.out.println("----DELETE LAST NODE----");
+        head = deleteLastNode(head);
+        printValuesNode(head);
+
+        System.out.println("----DELETE FROM GIVEN POSITION----");
+        head = deleteNodeFromGivenPosition(head, 5);
+        printValuesNode(head);
     }
 
-    public static Node<Integer> insertNewNodeInGivePosition(Node<Integer> newNode, Node<Integer> head, int position){
+    public static Node<Integer> deleteNodeFromGivenPosition(Node<Integer> head, int position) {
+        if (head == null) {
+            return head;
+        }
 
-        if(position == 1){
+        if (position == 1) {
+            head = head.next;
+        } else {
+            Node<Integer> previous = head;
+            int count = 1;
+            while (count < position - 1) {
+                previous = previous.next;
+                count++;
+            }
+
+            Node<Integer> current = previous.next;
+            previous.next = current.next;
+        }
+
+        return head;
+    }
+
+    public static Node<Integer> deleteLastNode(Node<Integer> head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        Node<Integer> current = head;
+        Node<Integer> previous = null;
+
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+
+        previous.next = null;
+        return head;
+    }
+
+    public static Node<Integer> deleteFirstNode(Node<Integer> head) {
+
+        if (head == null) {
+            return null;
+        }
+
+        Node<Integer> temp = head;
+        head = head.next;
+        temp.next = null;
+
+        return head;
+    }
+
+    public static Node<Integer> insertNewNodeInGivePosition(Node<Integer> newNode, Node<Integer> head, int position) {
+
+        if (position == 1) {
             newNode.next = head;
             head = newNode;
             return head;
-        }
-        else{
+        } else {
             Node<Integer> previous = head;
             int count = 1;
-            while(count < position - 1){
+            while (count < position - 1) {
                 previous = previous.next;
                 count++;
             }
@@ -52,39 +115,40 @@ public class SinglyLinkedList {
 
         return head;
     }
-    public static Node<Integer> insertNewNodeAtLastPosition(Node<Integer> newNode, Node<Integer> currentHead){
-        if (currentHead.data == null){
+
+    public static Node<Integer> insertNewNodeAtLastPosition(Node<Integer> newNode, Node<Integer> currentHead) {
+        if (currentHead.data == null) {
             currentHead = newNode;
             return currentHead;
         }
 
         Node<Integer> currentNode = currentHead;
-        while(currentNode.next != null){
+        while (currentNode.next != null) {
             currentNode = currentNode.next;
         }
         currentNode.next = newNode;
         return currentHead;
     }
 
-    public static Node<Integer> insertNewNodeAtFirstPosition(Node<Integer> newNode, Node<Integer> currentHead){
+    public static Node<Integer> insertNewNodeAtFirstPosition(Node<Integer> newNode, Node<Integer> currentHead) {
         newNode.setNext(currentHead);
         currentHead = newNode;
         return currentHead;
     }
 
-    public static Integer findLengthNode(Node<Integer> head){
+    public static Integer findLengthNode(Node<Integer> head) {
         Node<Integer> current = head;
         int count = 0;
-        while(current != null){
+        while (current != null) {
             count++;
             current = current.next;
         }
         return count;
     }
 
-    public static void printValuesNode(Node<Integer> head){
+    public static void printValuesNode(Node<Integer> head) {
         Node<Integer> current = head;
-        while (current != null){
+        while (current != null) {
             System.out.print(current.getData() + " --> ");
             current = current.next;
         }
@@ -95,7 +159,7 @@ public class SinglyLinkedList {
         private T data;
         private Node<T> next;
 
-        public Node(T data){
+        public Node(T data) {
             this.data = data;
         }
 
