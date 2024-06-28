@@ -91,6 +91,71 @@ public class SinglyLinkedList {
         System.out.println("----FIND NTH NODE IN THE LINKED LIST ----");
         Node<Integer> findNth = findNthNodeFromEndOfTheList(headSorted, 4);
         printValuesNode(findNth);
+
+
+        Node<Integer> headLoop = new Node<>(1);
+        Node<Integer> firstLoop = new Node<>(2);
+        Node<Integer> secondLoop = new Node<>(3);
+        Node<Integer> thirdLoop = new Node<>(4);
+        Node<Integer> fourLoop = new Node<>(5);
+        Node<Integer> fiveLoop = new Node<>(6);
+
+        headLoop.setNext(firstLoop);
+        firstLoop.setNext(secondLoop);
+        secondLoop.setNext(thirdLoop);
+        thirdLoop.setNext(fourLoop);
+        fourLoop.setNext(fiveLoop);
+        fiveLoop.setNext(secondLoop);
+
+        System.out.println("---HAS LOOP INSIDE OF THE LINKED LIST ----");
+        Boolean hasLoop = hasLoopInsideOfLinkedList(headLoop);
+        System.out.println("Has loop in the Linked List: "+ hasLoop);
+
+        System.out.println("----GET STARTED NODE IF HAS LOOP IN THE LINKED LIST ----");
+        Node<Integer> startedNode = getStartedNodeIfHasLoop(headLoop);
+        printValuesNodeOfLoopNodeStartedFromStartedNode(startedNode);
+
+    }
+
+    public static Node<Integer> getStartedNodeIfHasLoop(Node<Integer> head){
+
+        Node<Integer> slow = head, fast = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                return getStartedNode(head, slow);
+            }
+        }
+        return null;
+    }
+
+    public static Node<Integer> getStartedNode(Node<Integer> head, Node<Integer> slow){
+        Node<Integer> temp = head;
+        while(temp != slow){
+            temp = temp.next;
+            slow = slow.next;
+        }
+
+        return temp;
+    }
+
+    public static Boolean hasLoopInsideOfLinkedList(Node<Integer> head){
+
+        if (head == null){
+            return null;
+        }
+
+        Node<Integer> slow = head;
+        Node<Integer> fast = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if (slow == fast){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static Node<Integer> lastInTheList(Node<Integer> head){
@@ -417,6 +482,19 @@ public class SinglyLinkedList {
             current = current.next;
         }
         System.out.println("null");
+    }
+
+    public static void printValuesNodeOfLoopNodeStartedFromStartedNode(Node<Integer> head) {
+        Node<Integer> first = null;
+        Node<Integer> current = head;
+        while (current != null && first != current) {
+            if (current == head){
+                first = current;
+            }
+            System.out.print(current.getData() + " --> ");
+            current = current.next;
+        }
+        System.out.println(first.getData() + " <-- first");
     }
 
     public static class Node<T> {
