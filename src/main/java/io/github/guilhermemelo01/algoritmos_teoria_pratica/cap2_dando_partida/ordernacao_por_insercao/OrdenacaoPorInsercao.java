@@ -7,7 +7,7 @@ public class OrdenacaoPorInsercao {
         Integer indexFinded = findV(array, 12);
         System.out.println(indexFinded);
 
-        Integer[] result = insertionSort(array);
+//        Integer[] result = insertionSort(array);
         Integer[] resultReverse = insertionSortReverse(array);
 
         for(Integer res: resultReverse){
@@ -18,18 +18,18 @@ public class OrdenacaoPorInsercao {
     /*
      * 2.1-1 Reescreva o procedimento Insertion-Sort para ordenar em ordem não decrescent.
      */
-    public static Integer[] insertionSort(Integer[] array){
-        for(int i = 1; i < array.length; i++){
-            int chave = array[i];
-            int j = i - 1;
-            while(j >= 0 && array[j] > chave){
-                array[j + 1] = array[j];
-                j--;
-            }
-            array[j+1] = chave;
-        }
-        return array;
-    }
+//    public static Integer[] insertionSort(Integer[] array){
+//        for(int i = 1; i < array.length; i++){
+//            int chave = array[i];
+//            int j = i - 1;
+//            while(j >= 0 && array[j] > chave){
+//                array[j + 1] = array[j];
+//                j--;
+//            }
+//            array[j+1] = chave;
+//        }
+//        return array;
+//    }
 
     /*
     * 2.1-2 Reescreva o procedimento Insertion-Sort para ordenar em ordem não crescente, em vez da ordem não decrescente.
