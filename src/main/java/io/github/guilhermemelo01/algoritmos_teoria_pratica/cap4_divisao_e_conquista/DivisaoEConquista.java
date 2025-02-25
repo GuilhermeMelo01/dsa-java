@@ -17,7 +17,7 @@ public class DivisaoEConquista {
         if (inicio < fim) {
             int meio = (inicio + fim) / 2; // PEGA O MEIO DO ARRAY
             mergeSort(array, inicio, meio); // DIVIDE O ARRAY DO INICO AO MEIO
-            mergeSort(array, meio + 1, fim); // DIVIDE O ARRAY DO FIM AO INICIO
+            mergeSort(array, meio + 1, fim); // DIVIDE O ARRAY DO MEIO+1 AO FIM
             merge(array, inicio, meio, fim); // JUNTA AS PARTES APLICANDO ORDENAÇÃO
         }
     }
