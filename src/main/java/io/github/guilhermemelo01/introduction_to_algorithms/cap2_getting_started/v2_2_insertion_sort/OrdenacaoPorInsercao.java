@@ -1,4 +1,4 @@
-package io.github.guilhermemelo01.algoritmos_teoria_pratica.cap2_dando_partida.ordernacao_por_insercao;
+package io.github.guilhermemelo01.introduction_to_algorithms.cap2_getting_started.v2_2_insertion_sort;
 
 public class OrdenacaoPorInsercao {
     public static void main(String[] args) {
@@ -18,18 +18,18 @@ public class OrdenacaoPorInsercao {
     /*
      * 2.1-1 Reescreva o procedimento Insertion-Sort para ordenar em ordem não decrescent.
      */
-//    public static Integer[] insertionSort(Integer[] array){
-//        for(int i = 1; i < array.length; i++){
-//            int chave = array[i];
-//            int j = i - 1;
-//            while(j >= 0 && array[j] > chave){
-//                array[j + 1] = array[j];
-//                j--;
-//            }
-//            array[j+1] = chave;
-//        }
-//        return array;
-//    }
+    public static Integer[] insertionSort(Integer[] array){
+        for(int i = 1; i < array.length; i++){
+            int chave = array[i];
+            int j = i - 1;
+            while(j >= 0 && array[j] > chave){
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j+1] = chave;
+        }
+        return array;
+    }
 
     /*
     * 2.1-2 Reescreva o procedimento Insertion-Sort para ordenar em ordem não crescente, em vez da ordem não decrescente.

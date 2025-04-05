@@ -1,4 +1,4 @@
-package io.github.guilhermemelo01.algoritmos_teoria_pratica.cap4_divisao_e_conquista;
+package io.github.guilhermemelo01.introduction_to_algorithms.cap4_divide_and_conquer;
 
 public class DivisaoEConquista {
     public static void main(String[] args) {
