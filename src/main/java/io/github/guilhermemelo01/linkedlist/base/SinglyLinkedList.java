@@ -231,8 +231,6 @@ public class SinglyLinkedList {
 
     }
 
-
-
     public static Node<Integer> reversedLinkedList(Node<Integer> head){
 
         if (head == null){
@@ -260,7 +258,6 @@ public class SinglyLinkedList {
 
         return previous;
     }
-
 
     public static boolean searchValueInLinkedList(Node<Integer> head, int value){
         if (head == null){
@@ -349,7 +346,6 @@ public class SinglyLinkedList {
 
         return head;
     }
-
 
     public static Node<Integer> deleteNodeFromGivenPosition(Node<Integer> head, int position) {
         if (head == null) {
