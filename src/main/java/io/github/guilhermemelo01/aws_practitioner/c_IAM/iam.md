@@ -9,7 +9,8 @@ para definir o que cada um pode acessar.
 
 
 * Junto com IAM temos também o IDENTITY CENTER que funciona da mesma forma do IAM, só que ele 
-também permite você conectar todas as suas contas da empresa. Ex: Email, Computador, Software.
+também permite você conectar todas as suas contas da empresa. Ex: Email, Computador, Software. 
+É como se o IAM IC fosse um cliente final que acessa as aplicações.
 
 
 * MFA (Multi-factor autenticator) é utilizado para adicionar uma camada a mais de segurança na sua conta.
@@ -17,3 +18,8 @@ também permite você conectar todas as suas contas da empresa. Ex: Email, Compu
 ***
 ### ORGANIZATIONS
 ![img.png](images/organizations.png)
+
+
+### ACCESS KEY E SECRET KEY
+* Utilizamos acess key e secret key para acessar a AWS a partir da CLI ou de uma SDK(API, app, etc.).
+Criamos a autenticação atraves dessas chaves, ai podemos acessar a conta AWS.
