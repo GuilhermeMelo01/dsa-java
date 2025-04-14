@@ -26,7 +26,7 @@ varios OS que são distribuidos de acordo com a necessidade do cliente.
 
 ***
 # ARMAZENAMENTO - ELASTIC BLOCK STORE (EBS)
-![img.png](img.png)
+![img.png](images/ebs.png)
 
 * O Amazon Elastic Block Store (EBS) é um serviço de armazenamento de alto desempenho oferecido pela AWS para uso com
 Amazon Elastic Compute Cloud (EC2). Ele foi projetado para aplicativos que exigem armazenamento de baixa latência para
