@@ -75,3 +75,4 @@ aplicações em execução na AWS devido à sua durabilidade, flexibilidade e in
 
 ### FILE SYSTEM X (FSx)
 * O FSx funciona da mesma forma que o EFS, só que para Windows ou outros OS de alta perfomace.
+* Ele fica acessivel através do protocolo Server Message Block (SMB).
