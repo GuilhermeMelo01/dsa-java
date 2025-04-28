@@ -7,7 +7,7 @@ of vertices
 * In below example 1,2,3,4,5 are the __Vertex__ of Graph and each line connecting
 them is called as __edge__
 
-![img.png](images/graphMatrix.png)
+![img.png](images/graph.png)
 ***
 
 ### SOCIAL NETWORKING
@@ -41,3 +41,7 @@ It can be called as Social Networking graphMatrix.
 * We can also represent undirected graphMatrix as an Array of Linked List.
   * Where the array position will contain the value, and the values inside of this position
   will be a Linked List of vertices that are connected to the value.
+
+
+``BREADTH FIRST SEARCH (BFS)``
+- 
