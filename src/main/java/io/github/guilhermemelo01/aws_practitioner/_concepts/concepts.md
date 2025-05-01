@@ -28,7 +28,7 @@ A company needs to check for IAM access keys that have not been rotated recently
 ````
 
 references:
-- [Cognito](#cognito-reference)
+- [Cognito](#cognito)
 - [AWS Trusted Advisor](#aws-trusted-advisor)
 
 ***
@@ -55,11 +55,17 @@ Which solution will meet these requirements?
 Which security service automatically recognizes and classifies sensitive data or intellectual property on AWS?
   - Amazon Macie
 ````
+````
+A company has 5 TB of data stored in Amazon S3. The company plans to occasionally run queries on the data for analysis.
+Which AWS service should the company use to run these queries in the MOST cost-effective manner?
+  - Amazon Athena
+````
 
 references:
 - [EC2](#elastic-compute-cloud)
 - [S3](#amazon-s3)
 - [Amazon Macie](#amazon-macie)
+- [Amazon Athena](#amazon-athena)
 
 ***
 ### Domain 4: Billing, Pricing, and Support (12%)
@@ -69,6 +75,9 @@ references:
 ***
 
 ## CONCEPTS
+
+### ``Amazon Athena``
+- Amazon Athena is a serverless query service that allows you to analyze data directly in Amazon S3 using standard SQL queries. You don't need to set up or manage any infrastructure; you only pay for the queries you run. It is well-suited for ad-hoc and exploratory analysis on data stored in S3 without the need for maintaining a separate database.
 
 ### ``Amazon Macie``
 - Amazon Macie is a data security service provided by Amazon Web Services (AWS) that uses machine learning and pattern matching to discover, classify, and protect sensitive data stored in S3 buckets
@@ -121,7 +130,7 @@ your agility and innovation in AWS.
 |      Sustainability      | The ability to continually improve sustainability impacts by reducing energy consumption and increasing efficiency across all components of a workload by maximizing the benefits from the provisioned resources and minimizing the total resources required.                                                                            |
 
 
-### ``Cognito Reference``
+### ``Cognito``
 - Amazon Cognito is a fully managed identity platform for web and mobile applications. It simplifies adding user 
 sign-up, sign-in, and access control features, offering various authentication options like user pools, identity pools, 
 and integrations with social and enterprise identity providers.
