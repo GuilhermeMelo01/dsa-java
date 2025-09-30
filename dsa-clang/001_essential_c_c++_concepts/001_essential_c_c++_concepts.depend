@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1748789299 source:c:\users\melog\projects\mastering-dsa-course\001_essential_c_c++_concepts\main.cpp
+	<iostream>
+
+1748789377 source:c:\users\melog\projects\mastering-dsa-course\001_essential_c_c++_concepts\main.c
+	<stdio.h>
+
+1748789521 source:c:\users\melog\projects\mastering-dsa-course\001_essential_c_c++_concepts\main1.c
+	<stdio.h>
+
